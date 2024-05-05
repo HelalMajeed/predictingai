@@ -1,0 +1,164 @@
+body {
+    font-family: 'Jersey 10 Charted', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(230,167,220);
+    background: radial-gradient(circle, rgba(230,167,220,1) 0%, rgba(0,55,120,1) 100%);
+}
+
+
+.logo {
+    font-size: 45px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #eeeeee;
+}
+
+
+.input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+}
+
+.sub-category-button {
+    margin-top: 10px; /* Adjust spacing between buttons */
+}
+
+.category-button {
+    margin-right: 10px; /* Adjust spacing between main category buttons */
+}
+
+.sub-category-button {
+    margin-top: 5px; /* Adjust spacing between sub-buttons */
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #ff00005f;
+    color: #fff;
+}
+
+.sub-category-button:hover {
+    background-color: #0056b3;
+}
+
+.sub-button-container {
+    margin-top: 10px; /* Adjust spacing between main buttons and sub-buttons */
+}
+
+.container {
+    text-align: center;
+}
+
+.background {
+    background-color: rgba(255, 255, 255, 0.332); /* Background color with opacity */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+
+.button-container {
+    margin-bottom: 20px;
+}
+
+.category-button {
+    margin-right: 10px; /* Adjust spacing between main category buttons */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff; /* Default blue background color */
+    color: #fff; /* White text color */
+}
+
+.sub-button-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sub-category-button {
+    margin-right: 10px; /* Adjust spacing between sub-buttons */
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: transparent; /* Transparent background */
+    color: #007bff; /* Default blue color for sub-buttons */
+}
+
+.sub-category-button:hover {
+    background-color: rgba(0, 123, 255, 0.1); /* Light blue on hover */
+}
+
+.search-container {
+    margin-top: 20px;
+}
+#search {
+    display: none;
+    margin-left: 50px;
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.category-button.active {
+    background-color: #0056b3; /* Active button background color */
+}
+
+.sub-category-button:hover {
+    background-color: #0056b3; /* Light blue on hover for sub-buttons */
+}
+
+.category-button.active,
+.sub-category-button.active {
+    background-color: #0056b3; /* Active button background color */
+}
+
+.search-button {
+    display: none; /* Initially hide the search button */
+    margin-top: 15px;
+    margin-left: 170px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}

@@ -18,6 +18,13 @@ body {
     color: #eeeeee;
 }
 
+.background {
+    min-width: 400px;
+    background-color: rgba(255, 255, 255, 0.332); /* Background color with opacity */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
 
 .input {
     width: 100%;
@@ -47,42 +54,12 @@ body {
     background-color: #0056b3;
 }
 
-.sub-category-button {
-    margin-top: 10px; /* Adjust spacing between buttons */
-}
-
-.category-button {
+.predicting-type {
     margin-right: 10px; /* Adjust spacing between main category buttons */
-}
-
-.sub-category-button {
-    margin-top: 5px; /* Adjust spacing between sub-buttons */
-    padding: 8px 16px;
-    font-size: 14px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #ff00005f;
-    color: #fff;
-}
-
-.sub-category-button:hover {
-    background-color: #0056b3;
-}
-
-.sub-button-container {
-    margin-top: 10px; /* Adjust spacing between main buttons and sub-buttons */
 }
 
 .container {
     text-align: center;
-}
-
-.background {
-    background-color: rgba(255, 255, 255, 0.332); /* Background color with opacity */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
 
@@ -90,7 +67,7 @@ body {
     margin-bottom: 20px;
 }
 
-.category-button {
+.predicting-type {
     margin-right: 10px; /* Adjust spacing between main category buttons */
     padding: 10px 20px;
     font-size: 16px;
@@ -101,25 +78,6 @@ body {
     color: #fff; /* White text color */
 }
 
-.sub-button-container {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.sub-category-button {
-    margin-right: 10px; /* Adjust spacing between sub-buttons */
-    padding: 8px 16px;
-    font-size: 14px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: transparent; /* Transparent background */
-    color: #007bff; /* Default blue color for sub-buttons */
-}
-
-.sub-category-button:hover {
-    background-color: rgba(0, 123, 255, 0.1); /* Light blue on hover */
-}
 
 .search-container {
     margin-top: 20px;
@@ -134,16 +92,11 @@ body {
     border-radius: 5px;
 }
 
-.category-button.active {
+.predicting-type.active {
     background-color: #0056b3; /* Active button background color */
 }
 
-.sub-category-button:hover {
-    background-color: #0056b3; /* Light blue on hover for sub-buttons */
-}
-
-.category-button.active,
-.sub-category-button.active {
+.category-button.active {
     background-color: #0056b3; /* Active button background color */
 }
 

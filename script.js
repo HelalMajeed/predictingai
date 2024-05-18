@@ -1,7 +1,6 @@
 const textButton = document.getElementById('text');
 const imageButton = document.getElementById('image');
 const searchContainer = document.getElementById('search');
-const searchButton = document.getElementById('searchButton');
 
 function activateButton(clickedButton, otherButton) {
     clickedButton.classList.add('active');

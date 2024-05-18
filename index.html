@@ -13,7 +13,7 @@
     <div class="container">
         <div class="upbar"></div>
         <div class="logo">PredictingAI</div>
-        <div class="background">
+        <div class="background" id="bg">
             <div class="button-container" id="buttonContainer">
                 <button type="button" class="predicting-type" id="text" data-category="text">Predict with text</button>
                 <button type="button" class="predicting-type" id="image" data-category="text">Predict with image</button>
@@ -26,9 +26,8 @@
         </div>
     </div>
 
-    <!-- <script src="js/script.js"></script> Link to your JavaScript file -->
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
-    <script src="textAPI.js"></script>
+    <script type="module" src="textAPI.mjs"></script>
+    <script src="dist/bundle.js"></script>
 </body>
 </html>

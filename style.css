@@ -10,20 +10,34 @@ body {
     background: radial-gradient(circle, rgba(230,167,220,1) 0%, rgba(0,55,120,1) 100%);
 }
 
+@keyframes moveUp {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100px); }
+}
 
 .logo {
     font-size: 45px;
     margin-bottom: 20px;
     font-weight: 500;
     color: white;
+    transition: transform 0.5s ease-out;
 }
+
+/*//////////////////////////////////////////////// here is the backgruond shit //////////////////////////////////////////*/
+
 
 .background {
     min-width: 400px;
-    background-color: rgba(255, 255, 255, 0.332); /* Background color with opacity */
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.332); 
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.5s ease-out;
+}
+
+.background.move-up, .logo.move-up {
+    transform: translateY(-185px); 
 }
 
 .input {
@@ -82,7 +96,7 @@ body {
 .search-container {
     margin-top: 20px;
 }
-#search {
+#searchInput {
     display: none;
     margin-left: 50px;
     width: 300px;

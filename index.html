@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="result.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10+Charted&display=swap" rel="stylesheet">
@@ -12,17 +13,22 @@
 <body class="body">
     <div class="container">
         <div class="upbar"></div>
-        <div class="logo">PredictingAI</div>
+        <div class="logo" id="logo">PredictingAI</div>
         <div class="background" id="bg">
             <div class="button-container" id="buttonContainer">
                 <button type="button" class="predicting-type" id="text" data-category="text">Predict with text</button>
                 <button type="button" class="predicting-type" id="image" data-category="text">Predict with image</button>
             </div>
-            <div class="search-container">
-                <input type="search" name="search" id="search" placeholder="Search...">
+            <div class="search-container" id="s">
+                <input type="search" name="search" id="searchInput" placeholder="Search...">
             </div>
+            <div class="imageMessage" id="imageMessage">I am learnning at this moment, I will be able to generate images soon.</div>
             <div id="searchButtonContainer"></div>
                 <button type="button" class="search-button" id="searchButton" >Search</button>
+        </div>
+        <div class="result-wrapper" id="resultWrapper">
+            <div class="result" id="result"></div>
+            <button id="cancel">cancel</button>
         </div>
     </div>
 

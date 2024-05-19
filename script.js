@@ -1,6 +1,8 @@
 const textButton = document.getElementById('text');
 const imageButton = document.getElementById('image');
-const searchContainer = document.getElementById('search');
+const searchContainer = document.getElementById('searchInput');
+const imsg = document.getElementById("imageMessage");
+var appear = true;
 
 function activateButton(clickedButton, otherButton) {
     clickedButton.classList.add('active');
@@ -16,7 +18,11 @@ textButton.addEventListener('click', (event) => {
 imageButton.addEventListener('click', (event) => {
     console.log('Image Button Clicked');
     activateButton(imageButton, textButton); 
-    searchContainer.style.display = 'block'; 
+    searchContainer.style.display = 'none'; 
+    searchContainer.value = "";
+    searchButton.style.display = "none";
+    imsg.style.display = "block";
+
 });
 
 function toggleSearchButton() {

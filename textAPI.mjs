@@ -6,7 +6,7 @@ const resultDiv = document.getElementById("result");
 const cancel = document.getElementById("cancel");
 const wrapper = document.querySelector('.result-wrapper');
 const result = document.querySelector('.result');
-var prompt = "predict with me about ";
+var prompt = "predict about ";
 // var prompt = "";
 var yes = true;
 
@@ -18,7 +18,7 @@ search.addEventListener('input', (event) => {
 async function run() {
 
   try {
-    const response = await fetch('http://localhost:3000/generate', {
+    const response = await fetch('https://predictingai.onrender.com/generate', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -53,7 +53,6 @@ function moveBG() {
   if (yes) {
     background.classList.toggle("move-up");
     logo.classList.toggle("move-up");
-    yes = false;
   }
   setTimeout(() => {
     const loader = document.querySelector(".loader"); 
@@ -79,5 +78,5 @@ cancel.addEventListener('click', (event) => {
   background.classList.toggle("move-up");
   logo.classList.toggle("move-up");
   wrapper.reset();
-  yes = true;
+  yes = !yes;
 })

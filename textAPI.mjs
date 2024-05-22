@@ -48,7 +48,6 @@ searchButton.addEventListener('click', (event) => {
 function moveBG() {
     background.classList.toggle("move-up");
     logo.classList.toggle("move-up");
-<<<<<<< HEAD
   }
   setTimeout(() => {
     const loader = document.querySelector(".loader"); 
@@ -57,9 +56,6 @@ function moveBG() {
     }
     searchButton.style.display = "block";
   }, 10000);
-=======
->>>>>>> 2b1b95d (fixing bugs)
-}
 
 function showResult() {
     wrapper.style.display = 'flex'; // Make the wrapper visible
@@ -85,11 +81,6 @@ cancel.addEventListener('click', (event) => {
   cancel.style.display = "none";
   background.classList.toggle("move-up");
   logo.classList.toggle("move-up");
-<<<<<<< HEAD
-  wrapper.reset();
-  yes = !yes;
-=======
   resultDiv.innerHTML = "";
   yes = true;
->>>>>>> 2b1b95d (fixing bugs)
 })

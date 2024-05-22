@@ -8,7 +8,7 @@ const wrapper = document.querySelector('.result-wrapper');
 const result = document.querySelector('.result');
 var prompt = "predict about ";
 // var prompt = "";
-var yes = true;
+var yes = false;;
 
 
 search.addEventListener('input', (event) => {
@@ -46,13 +46,9 @@ searchButton.addEventListener('click', (event) => {
 
 
 function moveBG() {
-  const loader = document.createElement("div");
-  loader.className = "loader";
-  background.appendChild(loader);
-  searchButton.style.display = "none";
-  if (yes) {
     background.classList.toggle("move-up");
     logo.classList.toggle("move-up");
+<<<<<<< HEAD
   }
   setTimeout(() => {
     const loader = document.querySelector(".loader"); 
@@ -61,14 +57,26 @@ function moveBG() {
     }
     searchButton.style.display = "block";
   }, 10000);
+=======
+>>>>>>> 2b1b95d (fixing bugs)
 }
 
 function showResult() {
     wrapper.style.display = 'flex'; // Make the wrapper visible
     result.classList.add('animate'); // Start the animation
+    const loader = document.createElement("div");
+    loader.className = "loader";
+    wrapper.appendChild(loader);
+    setTimeout(() => {
+      const loader = document.querySelector(".loader"); 
+      if (loader) {
+        loader.remove();
+      }
+    }, 10000);
     setTimeout(() => {
       cancel.style.display = "block";
-    }, 7000);
+    }, 10050);
+    yes = true;
  
 }
 
@@ -77,6 +85,11 @@ cancel.addEventListener('click', (event) => {
   cancel.style.display = "none";
   background.classList.toggle("move-up");
   logo.classList.toggle("move-up");
+<<<<<<< HEAD
   wrapper.reset();
   yes = !yes;
+=======
+  resultDiv.innerHTML = "";
+  yes = true;
+>>>>>>> 2b1b95d (fixing bugs)
 })

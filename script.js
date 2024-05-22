@@ -13,6 +13,7 @@ textButton.addEventListener('click', (event) => {
     console.log('Text Button Clicked');
     activateButton(textButton, imageButton); 
     searchContainer.style.display = 'block'; 
+    imsg.style.display = "none";
 });
 
 imageButton.addEventListener('click', (event) => {

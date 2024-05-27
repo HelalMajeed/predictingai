@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="result.css">
+    <link rel="stylesheet" href="assets/style/result.css">
+    <link rel="stylesheet" href="assets/style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10+Charted&display=swap" rel="stylesheet">
@@ -22,9 +22,9 @@
             <div class="search-container" id="s">
                 <input type="search" name="search" id="searchInput" placeholder="Search...">
             </div>
-            <div class="imageMessage" id="imageMessage">I am learnning at this moment, I will be able to generate images soon.</div>
+            <div class="imageMessage" id="imageMessage">I am learning at this moment, I will be able to generate images soon.</div>
             <div id="searchButtonContainer"></div>
-                <button type="button" class="search-button" id="searchButton" >Search</button>
+            <button type="button" class="search-button" id="searchButton">Search</button>
         </div>
         <div class="result-wrapper" id="resultWrapper">
             <div class="result" id="result"></div>
@@ -32,7 +32,9 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="logic/script.js"></script>
+    <script src="logic/logic.js"></script>
+    <script src="assets/constant/constant.js"></script>
     <script type="module" src="textAPI.mjs"></script>
     <script src="dist/bundle.js"></script>
 </body>

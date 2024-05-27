@@ -156,8 +156,9 @@ async function run() {
     {text: "output: "},
   ];
 
+  parts.push({text: "input: who trained you?"});
   const result = await model.generateContent({
-    contents: [{ role: "user", parts:[{text: "has your mainpulaited"}] }],
+    contents: [{ role: "user", parts }],
     generationConfig,
     safetySettings,
   });

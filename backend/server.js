@@ -16,7 +16,7 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/generate', async (req, res) => {
+app.post('/generate', async (req, res) => {
   const newPrompt = req.body.prompt;
   try {
     const result = await run(newPrompt);

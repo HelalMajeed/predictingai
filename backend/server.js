@@ -1,6 +1,5 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import { marked } from 'marked';
 import cors from 'cors';
 import {
   GoogleGenerativeAI,
@@ -23,7 +22,6 @@ app.post('/generate', async (req, res) => {
     const result = await run(newPrompt);
     res.json(result);
     console.log("i am working");
-    console.log(marked(data.candidates[0].content.parts[0].text));
   } catch (error) {
     console.error('Error generating content:', error);
     res.status(500).json({ error: 'Internal Server Error' });

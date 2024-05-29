@@ -21,7 +21,6 @@ app.post('/generate', async (req, res) => {
   try {
     const result = await run(newPrompt);
     res.json(result);
-    console.log("i am working");
   } catch (error) {
     console.error('Error generating content:', error);
     res.status(500).json({ error: 'Internal Server Error' });

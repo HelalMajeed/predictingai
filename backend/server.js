@@ -21,6 +21,7 @@ app.post('/generate', async (req, res) => {
   try {
     const result = await run(newPrompt);
     res.json(result);
+    console.log(marked(data.candidates[0].content.parts[0].text));
   } catch (error) {
     console.error('Error generating content:', error);
     res.status(500).json({ error: 'Internal Server Error' });

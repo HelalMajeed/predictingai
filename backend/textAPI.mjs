@@ -2,11 +2,12 @@ search.addEventListener('input', (event) => {
   prompt = `predict about ${search.value}`;
 });
 
-async function sendData() {
-  ;
-}
 
 async function run() {
+
+  const loader = document.createElement("div");
+  loader.className = "loader";
+  wrapper.appendChild(loader);
   try {
     const response = await fetch('https://predictingai.onrender.com/generate', {
       method: 'POST',
@@ -17,11 +18,20 @@ async function run() {
     });
 
     const data = await response.json();
-    const text = data.text;
-    console.log(text);
-    resultDiv.innerText = text;
+    if(data){
+      resultDiv.innerText = data.candidates[0].content.parts[0].text;
+      // console.log(data.candidates[0].content.parts[0].text);
+    }else {
+      resultDiv.innerText = "error"
+    }
+    setTimeout(() => {
+      loader.remove();
+    }, 6000);
+    searchButton.style.display = "block";
+
   } catch (error) {
     console.error('Error generating content:', error);
+    resultDiv.innerText = "error"
   }
 }
 

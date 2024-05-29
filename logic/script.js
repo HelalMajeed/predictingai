@@ -18,14 +18,14 @@ function activateButton(clickedButton, otherButton) {
 }
 
 textButton.addEventListener('click', (event) => {
-    console.log('Text Button Clicked');
+    // console.log('Text Button Clicked');
     activateButton(textButton, imageButton); 
     searchContainer.style.display = 'block'; 
     imsg.style.display = "none";
 });
 
 imageButton.addEventListener('click', (event) => {
-    console.log('Image Button Clicked');
+    // console.log('Image Button Clicked');
     activateButton(imageButton, textButton); 
     searchContainer.style.display = 'none'; 
     searchContainer.value = "";

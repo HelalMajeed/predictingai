@@ -45,3 +45,4 @@ function toggleSearchButton() {
 searchContainer.addEventListener('input', (event) => {
     toggleSearchButton();
 })
+

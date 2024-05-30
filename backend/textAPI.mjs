@@ -19,7 +19,9 @@ async function run() {
 
     const data = await response.json();
     if(data){
-      resultDiv.innerText = data.candidates[0].content.parts[0].text;
+      const converter = new showdown.Converter();
+      const result = converter.makeHtml( data.candidates[0].content.parts[0].text);
+      resultDiv.innerHTML = result;
       // console.log(data.candidates[0].content.parts[0].text);
     }else {
       resultDiv.innerText = "error"

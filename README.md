@@ -1,3 +1,3 @@
 # predictingai
-https://main--predicting-ai.netlify.app/
+https://main--predicting-ai.netlify.app
 // fixing bugs later

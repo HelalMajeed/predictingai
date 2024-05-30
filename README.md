@@ -1,2 +1,3 @@
 # predictingai
-this project is not finished yet. because of final exams
+https://main--predicting-ai.netlify.app/
+// fixing bugs later

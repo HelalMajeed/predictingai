@@ -6,8 +6,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: rgb(230,167,220);
-    background: radial-gradient(circle, rgba(230,167,220,1) 0%, rgba(0,55,120,1) 100%);
+    background: #e6a7dc;
+    background: radial-gradient(circle, rgba(230,167,220,1) 0%, #003778 100%);
 }
 
 @keyframes moveUp {
@@ -60,12 +60,12 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #007bff;
+    background-color: #003778;
     color: #fff;
 }
 
 .button-container button:hover {
-    background-color: #0056b3;
+    background-color: #e6a7dc;
 }
 
 .predicting-type {
@@ -88,7 +88,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #007bff; /* Default blue background color */
+    background-color: #003778; /* Default blue background color */
     color: #fff; /* White text color */
 }
 
@@ -108,7 +108,7 @@ body {
 }
 
 .predicting-type.active {
-    background-color: #0056b3; /* Active button background color */
+    background-color: #e6a7dc; /* Active button background color */
 }
 
 .category-button.active {
@@ -120,7 +120,7 @@ body {
     margin-top: 15px;
     margin-left: 170px;
     padding: 8px 16px;
-    background-color: #007bff;
+    background-color: #003778;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -128,7 +128,7 @@ body {
 }
 
 .search-button:hover {
-    background-color: #0056b3;
+    background-color: #e6a7dc;
 }
 
 #text, #image {

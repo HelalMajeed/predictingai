@@ -97,6 +97,7 @@ body {
     margin-top: 20px;
 }
 #searchInput {
+    font-family: "Nova Square", sans-serif;
     display: none;
     margin-left: 50px;
     width: 300px;
@@ -128,4 +129,9 @@ body {
 
 .search-button:hover {
     background-color: #0056b3;
+}
+
+#text, #image {
+    font-family: "Nova Square", sans-serif;
+    font-weight: 500;
 }

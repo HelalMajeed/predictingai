@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10+Charted&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
 
 
     <!-- icon for different platforms -->
@@ -17,13 +18,14 @@
     <link rel="icon" type="image/png" href="/assets/icon/favicon-16x16.png" sizes="16x16">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-touch-icon.png">
     <link rel="manifest" href="/assets/icon/site.webmanifest">
+    <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
 
     <title>PredictingAI</title>
 </head>
 <body class="body">
     <div class="container">
         <div class="upbar"></div>
-        <div class="logo" id="logo">PredictingAI</div>
+        <div class="logo" id="logo"> Predicting-AI </div>
         <div class="background" id="bg">
             <div class="button-container" id="buttonContainer">
                 <button type="button" class="predicting-type" id="text" data-category="text">Predict with text</button>
@@ -43,10 +45,9 @@
     </div>
 
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="dist/bundle.js"></script>
     <script src="logic/logic.js"></script>
     <script src="assets/constant/constant.js"></script>
     <script type="module" src="backend/textAPI.mjs"></script>
-    <script src="dist/bundle.js"></script>
 </body>
 </html>

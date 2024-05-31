@@ -10,6 +10,10 @@ body {
     background: radial-gradient(circle, rgba(230,167,220,1) 0%, #003778 100%);
 }
 
+::selection {
+    background-color: #e6a7dc; 
+}
+
 @keyframes moveUp {
     0% { transform: translateY(0); }
     100% { transform: translateY(-100px); }
@@ -27,7 +31,7 @@ body {
 
 
 .background {
-    min-width: 400px;
+    min-width: 200px;
     max-width: 500px;
     background-color: rgba(255, 255, 255, 0.332); 
     padding: 20px;
@@ -40,13 +44,6 @@ body {
     transform: translateY(-185px); 
 }
 
-.input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
 
 .button-container {
     display: flex;
@@ -99,12 +96,13 @@ body {
 #searchInput {
     font-family: "Nova Square", sans-serif;
     display: none;
-    margin-left: 50px;
-    width: 300px;
+    margin-left: 13px;
+    width: 370px;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    outline: none;
 }
 
 .predicting-type.active {

@@ -1,94 +1,142 @@
-
-
-.imageMessage {
-    display: none;
-    font-family: "Nova Square", sans-serif;
-    /* font-weight: bold; */
-}
-
-.loader {
-  width: 25px;
-  aspect-ratio: 1;
-  border: 5px solid #ddd;
-  border-radius: 50%;
-  margin-top: 10px;
-  /* left: 45%; */
-  position: relative;
-  transform: rotate(45deg);
-}
-.loader::before {
-  content: "";
-  position: absolute;
-  inset: -7px;
-  border-radius: 50%;
-  border: 7px solid #317de8;
-  animation: l18 2s infinite linear;
-}
-@keyframes l18 {
-    0%   {clip-path:polygon(50% 50%,0 0,0    0,0    0   ,0    0   ,0    0   )}
-    25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0   ,100% 0   ,100% 0   )}
-    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
-    75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0    100%,0    100%)}
-    100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0    100%,0    0   )}
-}
-
-.result-wrapper {
-    display: none; /* Initially hidden */
-    align-items: center;
+body {
+    font-family: 'Jersey 10 Charted', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
     justify-content: center;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999; /* Ensure it stays on top */
-    background: rgba(0, 0, 0, 0.5); /* Optional: Dim the background */
+    align-items: center;
+    height: 100vh;
+    background: #e6a7dc;
+    background: radial-gradient(circle, rgba(230,167,220,1) 0%, #003778 100%);
 }
 
-.result {
-    margin-top: 10%;
-    font-family: "Nova Square", sans-serif;
-    background-color: rgba(255, 255, 255, 0.878); /* Adjusted for better readability */
-    border-radius: 10px;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    min-width: 50%;
-    max-width: 75%; /* Maximum width */
-    max-height: 70%; /* Prevent overflow and keep within viewport height */
-    min-height: 25%;
-    overflow-y: auto; /* Enable vertical scrolling if content overflows */
-    padding: 20px; /* Add some padding for better readability */
-    transition: transform 1s ease;
-    font-weight: 100;
+::selection {
+    background-color: #e6a7dc; 
 }
-
-
 
 @keyframes moveUp {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-50px); /* Move up by 100px */
-    }
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100px); }
 }
 
-.result.animate {
-    animation: moveUp 1s ease forwards; /* Run the animation */
+.logo {
+    font-size: 45px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: white;
+    transition: transform 0.5s ease-out;
 }
 
-#cancel {
+/*//////////////////////////////////////////////// here is the backgruond shit //////////////////////////////////////////*/
+
+
+.background {
+    min-width: 200px;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.332); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.5s ease-out;
+}
+
+.background.move-up, .logo.move-up {
+    transform: translateY(-185px); 
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #003778;
+    color: #fff;
+}
+
+.button-container button:hover {
+    background-color: #e6a7dc;
+}
+
+.predicting-type {
+    margin-right: 10px; /* Adjust spacing between main category buttons */
+}
+
+.container {
+    text-align: center;
+}
+
+
+.button-container {
+    margin-bottom: 20px;
+}
+
+.predicting-type {
+    margin-right: 10px; /* Adjust spacing between main category buttons */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #003778; /* Default blue background color */
+    color: #fff; /* White text color */
+}
+
+
+.search-container {
+    margin-top: 20px;
+}
+#searchInput {
+    font-family: "Nova Square", sans-serif;
+    display: none;
+    margin-left: 50px;
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.predicting-type.active {
+    background-color: #e6a7dc; /* Active button background color */
+}
+
+.category-button.active {
+    background-color: #0056b3; /* Active button background color */
+}
+
+.search-button {
     font-family: "Nova Square", sans-serif;
     display: none; /* Initially hide the search button */
+    margin-top: 15px;
+    margin-left: 170px;
     padding: 8px 16px;
-    margin-bottom: 25px;
+    background-color: #003778;
     color: #fff;
     border: none;
-    background-color: #0056b3;
     cursor: pointer;
     border-radius: 5px;
 }
 
-#cancel:hover {
+.search-button:hover {
     background-color: #e6a7dc;
+}
+
+#text, #image {
+    font-family: "Nova Square", sans-serif;
+    font-weight: 500;
 }

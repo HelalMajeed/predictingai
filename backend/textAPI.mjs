@@ -43,3 +43,11 @@ searchButton.addEventListener('click', (event) => {
   run();
 });
 
+
+searchContainer.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    showResult();
+    moveBG();
+    run();
+  }
+})
